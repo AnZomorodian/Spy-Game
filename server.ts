@@ -38,7 +38,75 @@ const CATEGORIES: Record<string, string[]> = {
     "سفارت", "بیمارستان", "هتل", "پایگاه نظامی", "استودیو فیلمسازی", "کشتی اقیانوس‌پیما",
     "قطار مسافربری", "کلانتری", "رستوران", "مدرسه", "سوپرمارکت", "دانشگاه", "موزه هنر",
     "پنت‌هاوس", "ایستگاه مترو", "مرکز خرید", "پارک عمومی", "سایت ساختمانی", "ویلای لوکس",
-    "کتابخانه عمومی", "ایستگاه آتش‌نشانی", "بندر", "مرکز همایش", "برج ساعت", "شهرداری"
+    "کتابخانه عمومی", "ایستگاه آتش‌نشانی", "بندر", "مرکز همایش", "برج ساعت", "شهرداری",
+    "گلخانه", "آکواریوم", "باغ وحش", "استادیوم", "پارکینگ طبقاتی", "قلعه تاریخی", "کاخ سلطنتی",
+    "ایستگاه فضایی", "آزمایشگاه علمی", "برج مراقبت", "سینما", "کافه", "نانوایی", "قصابی",
+    "داروخانه", "بیمارستان روانی", "پناهگاه زیرزمینی", "معبد باستانی", "صومعه"
+  ],
+  "Persian - Objects (اشیا)": [
+    "ساعت مچی", "تلفن همراه", "عینک آفتابی", "کیف پول", "کلید", "خودکار", "مسواک", "چتر",
+    "دوربین عکاسی", "هدفون", "لپ‌تاپ", "کتاب", "لیوان", "بشقاب", "قاشق", "چنگال",
+    "کنترل تلویزیون", "لامپ", "اتو", "جاروبرقی", "ماشین لباسشویی", "یخچال", "اجاق گاز",
+    "تابلو نقاشی", "گلدان", "آینه", "شانه", "ناخن‌گیر", "سشوار", "جعبه ابزار",
+    "قیچی", "گوشواره", "گردنبند", "انگشتر", "کلاه", "کمربند", "کفش", "جوراب",
+    "باتری", "شارژر", "ماوس", "کیبورد", "مانیتور", "پرینتر", "اسکنر", "تلفن ثابت",
+    "گاوصندوق", "تابلو اعلانات", "تقویم", "نقشه", "فندک", "کبریت"
+  ],
+  "Persian - Environment (محیط زیست)": [
+    "جنگل بلوط", "کویر لوت", "دریای خزر", "خلیج فارس", "قله دماوند", "دریاچه ارومیه",
+    "آبشار بیشه", "ارسباران", "دشت مغان", "تالاب انزلی", "کوه صفه", "غار علیصدر",
+    "رودخانه کارون", "زاینده‌رود", "پارک ملی گلستان", "دشت کویر", "کوهستان البرز",
+    "کوهستان زاگرس", "جزیره قشم", "جزیره کیش", "هورالعظیم", "تالاب شادگان", "منطقه حفاظت‌شده",
+    "دریاچه نمک", "قله سبلان", "جنگل‌های هیرکانی", "دریای عمان", "رود ارس", "تنگه هرمز",
+    "جزیره ابوموسی", "تنگه واشی", "آبشار مارگون", "غار سهولان", "گردنه حیران", "دشت لاله",
+    "ریگ جن", "دره ستارگان", "جنگل ابر", "روستای ماسوله", "کندوان", "ابیانه"
+  ],
+  "Persian - Heritage (میراث باستان)": [
+    "تخت جمشید", "پاسارگاد", "نقش رستم", "بیستون", "طاق بستان", "سی و سه پل",
+    "پل خواجو", "ارگ بم", "میدان نقش جهان", "کاخ گلستان", "عمارت عالی‌قاپو",
+    "مسجد شیخ لوت‌الله", "مسجد جامع یزد", "باغ ارم", "حافظیه", "سعدیه", "آرامگاه فردوسی",
+    "گنبد قابوس", "تخت سلیمان", "کاروانسرای عباسی", "بازار تبریز", "قلعه فلک‌الافلاک",
+    "آرامگاه کوروش", "کشور پارس", "کاخ هشت‌بهشت", "عمارت چهل‌ستون", "منار جنبان",
+    "برج طغرل", "معبد چغازنبیل", "قلعه رودخان", "ارگ کریم‌خان", "حمام وکیل", "بازار وکیل",
+    "نارنجستان قوام", "باغ فین", "گنبد سلطانیه", "مجموعه خانقاه", "بقعه شیخ صفی"
+  ],
+  "Persian - Food (غذاها)": [
+    "قرمه سبزی", "قیمه", "فسنجان", "کباب کوبیده", "جوجه کباب", "آش رشته", "کوفته تبریزی",
+    "باقالی پلو", "زرشک پلو", "ته‌چین", "میرزا قاسمی", "کشک بادمجان", "آبگوشت (دیزی)",
+    "کتلت", "شامی", "لوبیا پلو", "عدس پلو", "کلم پلو", "دمپختک", "خورشت کرفس",
+    "خورشت آلو اسفناج", "دلمه", "کوکو سبزی", "کوکو سیب‌زمینی", "کله‌پاچه", "حلیم",
+    "سمبوسه", "فلافل", "بریانی اصفهان", "کال کباب", "مرغ شکم‌پر", "ماهی شکم‌پر",
+    "سرغ سمنانی", "قیمه نثار", "شله مشهدی", "یتیمچه", "خورشت بامیه", "اشکنه"
+  ],
+  "Persian - Cars (ماشین)": [
+    "پراید", "پژو ۲۰۶", "سمند", "دنا", "تارا", "شاهین", "مزدا ۳", "هیوندای سانتافه",
+    "تویوتا کمری", "بنز سری E", "بی‌ام‌و سری ۵", "کیا اپتیما", "رنو ال ۹۰", "نیسان آبی",
+    "پیکان", "ولوو FH", "اسکانیا", "لامبورگینی", "فراری", "پورشه ۹۱۱", "تسلا مدل S",
+    "جیپ", "لندرور", "تویوتا لندکروزر", "نیسان پاترول", "ام‌وی‌ام", "چری تیگو", "جک S5"
+  ],
+  "Persian - Sci-Fi (علمی تخیلی)": [
+    "سفر در زمان", "حیات فرازمینی", "هوش مصنوعی", "رباتیک", "سایبورگ", "سفر میان‌ستاره‌ای",
+    "کرم‌چاله", "تله‌پورت", "واقعیت مجازی", "جهان‌های موازی", "پساآخرالزمان", "آرمان‌شهر",
+    "پادآرمان‌شهر", "لیزر", "شمشیر نوری", "سفینه فضایی", "ایستگاه مداری", "کلونی مریخ",
+    "مهندسی ژنتیک", "کلون‌سازی", "نامرئی شدن", "کنترل ذهن", "جنگ ستارگان", "سایبرپانک"
+  ],
+  "Persian - People (شخصیت)": [
+    "کوروش کبیر", "داریوش بزرگ", "فردوسی", "حافظ", "سعدی", "مولانا", "خیام", "ابن سینا",
+    "رازی", "ابوریحان بیرونی", "شاه عباس", "امیرکبیر", "مصدق", "تختی", "پروفسور حسابی",
+    "مریم میرزاخانی", "عباس کیارستمی", "اصغر فرهادی", "محمدرضا شجریان", "گوگوش", "داریوش",
+    "علی دایی", "ناصر حجازی", "مهران مدیری", "عادل فردوسی‌پور", "پرویز پرستویی"
+  ],
+  "Persian - Media (فیلم و سریال)": [
+    "جدایی نادر از سیمین", "درباره الی", "مارمولک", "اخراجی‌ها", "آژانس شیشه‌ای",
+    "مختارنامه", "یوسف پیامبر", "شب‌های برره", "پایتخت", "شهرزاد", "قورباغه", "زخم کاری",
+    "کلاه قرمزی", "خونه مادربزرگه", "مدرسه موش‌ها", "هامون", "گوزن‌ها", "قیصر",
+    "مرد هزار چهره", "قهوه تلخ", "ساخت ایران", "عاشقانه", "برادران لیلا", "متری شش و نیم"
+  ],
+  "Persian - General (اطلاعات عمومی)": [
+    "خورشید", "ماه", "زمین", "مریخ", "کهکشان راه شیری", "اقیانوس آرام", "کوه اورست",
+    "رود نیل", "دیوار چین", "برج ایفل", "اهرام مصر", "مجسمه آزادی", "اینترنت", "رایانه",
+    "برق", "نیروی جاذبه", "نسبیت", "تکامل", "فتوسنتز", "جدول تناوبی", "دی‌ان‌ای",
+    "المپیک", "جام جهانی", "صلح نوبل", "سازمان ملل", "پول", "اقتصاد", "روانشناسی"
   ]
 };
 
@@ -67,6 +135,11 @@ async function startServer() {
         wins: 0,
         gamesPlayed: 0,
         spyWins: 0,
+        correctGuesses: 0,
+        totalGuesses: 0,
+        successfulVotes: 0,
+        totalAccusations: 0,
+        totalPlayTime: 0,
         avatar: `https://api.dicebear.com/7.x/avataaars/svg?seed=${name}`
       };
     }
@@ -102,10 +175,17 @@ async function startServer() {
     });
 
     game.status = 'result';
+    const duration = (Date.now() - (game.startTime || Date.now())) / 1000;
+
+    let targetIsSpy = false;
+    if (mostVotedId && game.spyIds.includes(mostVotedId)) {
+      targetIsSpy = true;
+    }
+
     if (isTie || !mostVotedId) {
       game.winner = 'spy';
       game.winningReason = 'The agents could not reach a clear consensus. The spies escaped in the confusion!';
-    } else if (game.spyIds.includes(mostVotedId)) {
+    } else if (targetIsSpy) {
       game.winner = 'agents';
       const spyName = game.players.find((p: any) => p.id === mostVotedId)?.name;
       game.winningReason = `The agents successfully identified a spy: ${spyName}! The network has been compromised.`;
@@ -119,13 +199,22 @@ async function startServer() {
     game.players.forEach((p: any) => {
       const user = getOrCreateUser(p.name);
       user.gamesPlayed += 1;
+      user.totalPlayTime += duration;
       const isSpy = game.spyIds.includes(p.id);
+
+      // Voting stats
+      if (game.votes && game.votes[p.id]) {
+        user.totalAccusations += 1;
+        if (targetIsSpy && game.votes[p.id] === mostVotedId) {
+          user.successfulVotes += 1;
+        }
+      }
+
       if (game.winner === 'agents' && !isSpy) user.wins += 1;
       if (game.winner === 'spy' && isSpy) {
         user.wins += 1;
         user.spyWins += 1;
       }
-      // Sync local player object with updated stats for the results screen
       p.stats = { ...user };
     });
 
@@ -153,7 +242,8 @@ async function startServer() {
           spyCount: 1,
           votingTime: 60,
           category: "Metropolis",
-          mode: "classic"
+          mode: "classic",
+          locationCount: 20
         },
         spyIds: [],
         votes: {},
@@ -166,10 +256,13 @@ async function startServer() {
 
     socket.on('updateSettings', ({ gameId, settings }: { gameId: string, settings: any }) => {
       const game = games[gameId];
-      if (!game || game.status !== 'lobby' || game.players[0].id !== socket.id) return;
+      if (!game || game.players[0].id !== socket.id) return;
       
       game.settings = settings;
-      game.locations = CATEGORIES[settings.category] || CATEGORIES["Metropolis"];
+      // Update locations only if not in middle of a hardcore game (to avoid list jumping)
+      if (game.status === 'lobby') {
+        game.locations = CATEGORIES[settings.category] || CATEGORIES["Metropolis"];
+      }
       io.to(gameId).emit('gameUpdated', game);
     });
 
@@ -177,15 +270,19 @@ async function startServer() {
       const gId = gameId?.toUpperCase();
       const game = games[gId];
       if (!game) {
-        socket.emit('error', 'Game not found');
+        socket.emit('error_code', 'not_found');
         return;
       }
       if (game.status !== 'lobby') {
-        socket.emit('error', 'Game already started');
+        socket.emit('error_code', 'already_started');
         return;
       }
       if (game.players.length >= 12) {
-        socket.emit('error', 'Game is full');
+        socket.emit('error_code', 'full');
+        return;
+      }
+      if (game.players.some((p: any) => p.name === playerName)) {
+        socket.emit('error_code', 'duplicate_name');
         return;
       }
 
@@ -206,12 +303,13 @@ async function startServer() {
       if (!game || game.players[0].id !== socket.id) return;
 
       if (game.players.length < 3) {
-        socket.emit('error', 'Need at least 3 players');
+        socket.emit('error_code', 'min_players');
         return;
       }
 
       const baseLocations = CATEGORIES[game.settings.category] || CATEGORIES["Metropolis"];
-      const location = baseLocations[Math.floor(Math.random() * baseLocations.length)];
+      const selectedLocations = [...baseLocations].sort(() => Math.random() - 0.5).slice(0, game.settings.locationCount || 20);
+      const location = selectedLocations[Math.floor(Math.random() * selectedLocations.length)];
       
       // Select Spies
       const playerCount = game.players.length;
@@ -220,16 +318,18 @@ async function startServer() {
       const spyIds = shuffledIndices.slice(0, desiredSpyCount).map(idx => game.players[idx].id);
 
       game.status = 'playing';
+      game.startTime = Date.now();
       game.location = location;
       game.spyIds = spyIds;
+      game.currentTurnId = game.players[Math.floor(Math.random() * playerCount)].id;
       
       // Mode specific logic
       if (game.settings.mode === 'hardcore') {
         const decoys = ["Area 51", "Secret Island", "The Void", "Bermuda Triangle", "Underworld"]
           .sort(() => Math.random() - 0.5);
-        game.locations = [...baseLocations, ...decoys].sort(() => Math.random() - 0.5);
+        game.locations = [...selectedLocations, ...decoys].sort(() => Math.random() - 0.5);
       } else {
-        game.locations = [...baseLocations];
+        game.locations = [...selectedLocations];
       }
       
       if (game.settings.mode === 'speedrun') {
@@ -270,6 +370,69 @@ async function startServer() {
       }, 1000);
     });
 
+    socket.on('toggleMute', ({ gameId, playerId }: { gameId: string, playerId: string }) => {
+      const game = games[gameId];
+      if (!game || !game.players.find((p:any) => p.id === socket.id && p.isHost)) return;
+      const player = game.players.find((p:any) => p.id === playerId);
+      if (player) {
+        player.muted = !player.muted;
+        io.to(game.id).emit('gameUpdated', game);
+      }
+    });
+
+    socket.on('skipTurn', (gameId: string) => {
+      const game = games[gameId];
+      if (!game || !game.players.find((p:any) => p.id === socket.id && p.isHost)) return;
+      if (game.status !== 'playing') return;
+      
+      const currentIndex = game.players.findIndex((p:any) => p.id === game.currentTurnId);
+      const nextIndex = (currentIndex + 1) % game.players.length;
+      game.currentTurnId = game.players[nextIndex].id;
+      io.to(game.id).emit('gameUpdated', game);
+    });
+
+    socket.on('reorderPlayers', ({ gameId, players }: { gameId: string, players: any[] }) => {
+      const game = games[gameId];
+      if (!game || !game.players.find((p:any) => p.id === socket.id && p.isHost)) return;
+      game.players = players;
+      io.to(game.id).emit('gameUpdated', game);
+    });
+
+    socket.on('reshuffleSpies', (gameId: string) => {
+      const game = games[gameId];
+      if (!game || !game.players.find((p:any) => p.id === socket.id && p.isHost)) return;
+      
+      const baseLocations = CATEGORIES[game.settings.category] || CATEGORIES["Metropolis"];
+      const selectedLocations = [...baseLocations].sort(() => Math.random() - 0.5).slice(0, game.settings.locationCount || 20);
+      const location = selectedLocations[Math.floor(Math.random() * selectedLocations.length)];
+      
+      const playerCount = game.players.length;
+      const desiredSpyCount = Math.min(game.settings.spyCount, playerCount - 1);
+      const shuffledIndices = Array.from({ length: playerCount }, (_, i) => i).sort(() => Math.random() - 0.5);
+      const spyIds = shuffledIndices.slice(0, desiredSpyCount).map(idx => game.players[idx].id);
+
+      game.location = location;
+      game.locations = selectedLocations;
+      if (game.settings.mode === 'hardcore') {
+        const decoys = ["Area 51", "Secret Island", "The Void", "Bermuda Triangle", "Underworld"]
+          .sort(() => Math.random() - 0.5);
+        game.locations = [...selectedLocations, ...decoys].sort(() => Math.random() - 0.5);
+      }
+      game.currentTurnId = game.players[Math.floor(Math.random() * playerCount)].id;
+      game.status = 'playing';
+      game.votes = {};
+      game.winner = null;
+      game.winningReason = null;
+      game.isPaused = false;
+      
+      if (gameTimers[gameId]) {
+        clearInterval(gameTimers[gameId]);
+        delete gameTimers[gameId];
+      }
+
+      io.to(game.id).emit('gameUpdated', game);
+    });
+
     socket.on('pauseGame', (gameId: string) => {
       const game = games[gameId];
       if (!game || !game.players.find((p:any) => p.id === socket.id && p.isHost)) return;
@@ -294,7 +457,7 @@ async function startServer() {
         game.players.splice(playerIndex, 1);
         if (kickedSocket) {
           kickedSocket.leave(gameId);
-          kickedSocket.emit('error', 'You have been removed from the session by the director.');
+          kickedSocket.emit('error_code', 'kicked');
         }
         io.to(game.id).emit('gameUpdated', game);
       }
@@ -332,6 +495,7 @@ async function startServer() {
       const game = games[gameId];
       if (!game || game.status !== 'playing' || !game.spyIds.includes(socket.id)) return;
 
+      const duration = (Date.now() - (game.startTime || Date.now())) / 1000;
       const results = game.players.map((p: any) => ({ name: p.name, isSpy: game.spyIds.includes(p.id) }));
 
       if (location === game.location) {
@@ -343,6 +507,28 @@ async function startServer() {
         game.winner = 'agents';
         game.winningReason = `The spy guessed incorrectly (${location}). The actual location was ${game.location}.`;
       }
+
+      game.players.forEach((p: any) => {
+        const user = getOrCreateUser(p.name);
+        user.gamesPlayed += 1;
+        user.totalPlayTime += duration;
+        const isSpy = game.spyIds.includes(p.id);
+
+        if (p.id === socket.id) {
+          user.totalGuesses += 1;
+          if (location === game.location) {
+            user.correctGuesses += 1;
+          }
+        }
+
+        if (game.winner === 'agents' && !isSpy) user.wins += 1;
+        if (game.winner === 'spy' && isSpy) {
+          user.wins += 1;
+          user.spyWins += 1;
+        }
+        p.stats = { ...user };
+      });
+
       io.to(game.id).emit('gameUpdated', game);
     });
 

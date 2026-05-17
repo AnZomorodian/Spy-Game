@@ -9,10 +9,16 @@ export interface Player {
   role?: string;
   isHost: boolean;
   avatar?: string;
+  muted?: boolean;
   stats: {
     wins: number;
     gamesPlayed: number;
     spyWins: number;
+    correctGuesses: number;
+    totalGuesses: number;
+    successfulVotes: number;
+    totalAccusations: number;
+    totalPlayTime: number;
   };
 }
 
@@ -23,6 +29,7 @@ export interface GameSettings {
   votingTime: number; // seconds
   category: string;
   mode: GameMode;
+  locationCount: number;
 }
 
 export interface GameState {
@@ -38,6 +45,7 @@ export interface GameState {
   settings: GameSettings;
   votingTimer?: number;
   isPaused: boolean;
+  currentTurnId?: string;
 }
 
 export interface UserSummary {
@@ -47,6 +55,11 @@ export interface UserSummary {
     wins: number;
     gamesPlayed: number;
     spyWins: number;
+    correctGuesses: number;
+    totalGuesses: number;
+    successfulVotes: number;
+    totalAccusations: number;
+    totalPlayTime: number;
   };
 }
 
@@ -66,6 +79,9 @@ export interface ClientToServerEvents {
   kickPlayer: (gameId: string, playerId: string) => void;
   pauseGame: (gameId: string) => void;
   resumeGame: (gameId: string) => void;
+  toggleMute: (gameId: string, playerId: string) => void;
+  skipTurn: (gameId: string) => void;
+  reshuffleSpies: (gameId: string) => void;
   startVoting: (gameId: string) => void;
   castVote: (gameId: string, targetId: string) => void;
   spyGuess: (gameId: string, location: string) => void;
